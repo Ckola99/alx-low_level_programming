@@ -1,7 +1,7 @@
 #include <stdlib.h>
 #include <stdio.h>
 
-/* This is the main part of the code */
+/* Main - This is the main part of the code */
 int main(void)
 {
 
