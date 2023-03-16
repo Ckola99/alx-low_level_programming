@@ -2,7 +2,8 @@
 #include <stdio.h>
 
 /**
- * A function that prints text using puts function
+ * Main - is function that prints text using puts function.
+ * Returns 0 if it is a success.
  */
 
 int main(void)
