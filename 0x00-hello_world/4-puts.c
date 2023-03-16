@@ -1,13 +1,13 @@
 #include <stdlib.h>
 #include <stdio.h>
 
-/**
- * Main - is function that prints text using puts function.
- * Returns 0 if it is a success.
- */
-
+/* This is the main part of the code */
 int main(void)
 {
+
+/*This puts function prints the phrase */
 puts("\"Programming is like building a multilingual puzzle\n");
+
+/*This ends the function and returns 0 */
 return 0;
 }
