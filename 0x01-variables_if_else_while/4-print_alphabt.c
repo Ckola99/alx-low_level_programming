@@ -15,7 +15,7 @@ char *new_line = "\n";
 
 for (i = 0; i < 24; i++)
 {
-    putchar(alpha[i]);
+putchar(alpha[i]);
 }
 
 putchar(*new_line);

@@ -16,12 +16,12 @@ char *new_line = "\n";
 
 for (i = 0; i < 26; i++)
 {
-    putchar(alpha[i]);
+putchar(alpha[i]);
 }
 
 for (i = 0; i < 26; i++)
 {
-    putchar(ALPHA[i]);
+putchar(ALPHA[i]);
 }
 putchar(*new_line);
 return (0);
