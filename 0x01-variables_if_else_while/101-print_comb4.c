@@ -9,7 +9,7 @@
 
 int main(void)
 {
-	int num1;
+    int num1;
     int num2 = 0;
     int num3 = 0;
 
@@ -33,4 +33,5 @@ int main(void)
             }
         }
     }
+    return(0);
 }
