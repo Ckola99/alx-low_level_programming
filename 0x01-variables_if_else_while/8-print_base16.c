@@ -9,9 +9,10 @@
 
 int main(void)
 {
+int i;	
 char Hex[16] = {"0123456789abcdef"};
 
-for (int i = 0; i < 16; i++)
+for (i = 0; i < 16; i++)
 {
     putchar(Hex[i]);
 }
