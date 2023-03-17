@@ -9,12 +9,11 @@
 
 int main(void)
 {
-int i;
-char alpha[26] = {"abcdefghijklmnopqrstuvwxyz"};
+char Rev_alpha;
 
-for (i = 26; i >= 0; i--)
+for (Rev_alpha = 'z'; i >= 'a'; Rev_alpha--)
 {
-putchar(alpha[i]);
+putchar(Rev_alpha);
 }
 
 putchar('\n');
