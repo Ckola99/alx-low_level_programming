@@ -10,12 +10,13 @@
 int main(void)
 {
 int i;
-char alpha[27] = {"abcdefghijklmnopqrstuvwxyz"};
+char alpha[26] = {"abcdefghijklmnopqrstuvwxyz"};
+char *new_line = "\n";
 
-for (i = 0; i < 27; i++)
+for (i = 0; i < 26; i++)
 {
 	putchar(alpha[i]);
 }
-
+putchar(*new_line);
 return (0);
 }
