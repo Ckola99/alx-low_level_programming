@@ -2,31 +2,33 @@
 
 /**
  * print_diagonal -  draws a diagonal line on the terminal.
- * @n: is the counter to print diagonals.
+ * @n: is the counter to print diagonals../8-squares
  * Return: void.
  */
 
 void print_diagonal(int n)
 {
 	int space;
+	int i;
 
 	if (n <= 0)
 	{
-		putchar('\n');
+		_putchar('\n');
 
 
 	}
 	else
 	{
-		for (int i = 0; i < n; i++)
+		for (i = 0; i < n; i++)
 		{
 			for (space = 0; space < i - 1 + 1; space++)
 			{
-				putchar(' ');
+				_putchar(' ');
 			}
-			putchar('\\');
-			putchar('\n');
+			_putchar('\\');
+			_putchar('\n');
 		}
+		_putchar('\n');
 
 	}
 }
