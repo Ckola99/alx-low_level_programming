@@ -1,8 +1,8 @@
 #include "main.h"
 
 /**
- * print_diagonal - prints a square, followed by a new line.
- * @n: is the square dimensions.
+ * print_square - prints a square, followed by a new line.
+ * @size: is the square dimensions.
  * Return: void.
  */
 
