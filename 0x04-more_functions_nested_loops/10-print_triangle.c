@@ -8,16 +8,20 @@
 
 void print_triangle(int size)
 {
+	int row;
+	int space;
+	int column;
+
 	if (size > 0)
 	{
-		for (int row = 0; row < size; row++)
+		for (row = 0; row < size; row++)
 		{
-			for (int space = 0; space < size - row - 1; space++)
+			for (space = 0; space < size - row - 1; space++)
 			{
 				_putchar(' ');
 			}
 
-			for (int column = 0; column <= row; column++)
+			for (column = 0; column <= row; column++)
 			{
 				_putchar('#');
 			}
