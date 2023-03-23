@@ -3,9 +3,9 @@
 #include <stdio.h>
 
 /**
- * main - check the code
+ * main - start of the code.
  *
- * Return: Always 0.
+ * Return: (0) if success.
  */
 
 int main(void)
@@ -16,22 +16,27 @@ int main(void)
 	{
 		if ((i % 3) == 0 && (i % 5) == 0)
 		{
-			printf("FizzBuzz ");
+			printf("FizzBuzz");
 		}
 		else if (i % 3 == 0)
 		{
-			printf("Fizz ");
+			printf("Fizz");
 		}
 		else if (i % 5 == 0)
 		{
-			printf("Buzz ");
+			printf("Buzz");
 		}
 		else
 		{
-			printf("%i ", i);
+			printf("%i", i);
 		}
+
+		if (i == 100)
+		{
+			break;
+		}
+		printf(" ");
 	}
 	printf("\n");
 	return (0);
 }
-
