@@ -10,4 +10,4 @@ In this repository, are all C projects that I have developed during the ALX SE P
 
 0x03_debugging.
 
-0x04-more_functions_nested_loops.
+0x04-more_functions_nested_lo
