@@ -31,7 +31,7 @@ void print_rev(char *str)
 
 	for (i = j; i >= 0; i--)
 	{
-		putchar(str[i]);
+		_putchar(str[i]);
 	}
 
 }
