@@ -4,10 +4,9 @@
 /**
  * print_rev - prints string in reverse.
  * @str: is the string.
- * Return - int.
+ * Return - void.
  */
 
-A
 int _strlen(char *str)
 {
 	int len;
