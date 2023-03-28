@@ -7,10 +7,11 @@
  * Return - void.
  */
 
-int _strlen(char *str)
+void print_rev(char *str)
 {
-	int len;
 	int i;
+	int j;
+	int len;
 
 	len = 0;
 
@@ -18,20 +19,11 @@ int _strlen(char *str)
 	{
 		len++;
 	}
-	return (len);
-}
 
-void print_rev(char *str)
-{
-	int i;
-	int j;
-
-	j = _strlen(str) - 1;
-
+	j = len - 1;
 
 	for (i = j; i >= 0; i--)
 	{
-		_putchar(str[i]);
+		putchar(str[i]);
 	}
-
 }
