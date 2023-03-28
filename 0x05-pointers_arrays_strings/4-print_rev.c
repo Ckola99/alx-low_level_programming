@@ -7,6 +7,11 @@
  * Return - void.
  */
 
+int _putchar(char c)
+{
+	return (write(1, &c, 1));
+}
+
 void print_rev(char *str)
 {
 	int i;
@@ -24,7 +29,7 @@ void print_rev(char *str)
 
 	for (i = j; i >= 0; i--)
 	{
-		putchar(str[i]);
+		_putchar(str[i]);
 	}
-	putchar('\n');
+	_putchar('\n');
 }
