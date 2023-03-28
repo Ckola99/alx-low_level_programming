@@ -11,6 +11,7 @@ void puts_half(char *str)
 {
 	int i;
 	int len;
+	int last;
 
 	len = 0;
 
@@ -22,9 +23,7 @@ void puts_half(char *str)
 	for (i = 0; str[i] != '\0'; i++)
 	{
 		int half;
-		int last;
 
-		last = ((len - 1) / 2);
 		half = (len / 2);
 
 		if (i >= half)
@@ -37,6 +36,8 @@ void puts_half(char *str)
 			putchar(str[last]);
 		}
 	}
+
+	last = last = ((len - 1) / 2);
 
 	if (len % 1 == 0 && len % 3 == 0)
 	{
