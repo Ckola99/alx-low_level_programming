@@ -14,7 +14,7 @@ char *_strcpy(char *dest, char *src)
         int n;
 
         i = 0;
-        n = _strlen(src);
+        n = strlen(src);
 
         if (src == NULL || dest == NULL)
         {
