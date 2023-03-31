@@ -1,6 +1,6 @@
-## 0x06. C - More pointers, arrays and strings
+## 0x06. C - More pointers, arrays and strings.
 
-# Mandatory Tasks
+# Mandatory Tasks.
 
 0. strcat - Write a function that concatenates two strings.
 
@@ -17,6 +17,8 @@
 6. Expect the best. Prepare for the worst. Capitalize on what comes - Write a function that capitalizes all words of a string.
 
 7. Mozart composed his music not for the elite, but for everybody - Write a function that encodes a string into 1337.
+
+# Advanced Tasks.
 
 8. rot13 - Write a function that encodes a string using rot13.
 
