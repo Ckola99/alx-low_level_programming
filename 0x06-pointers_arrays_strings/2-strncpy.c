@@ -16,10 +16,8 @@ char *_strncpy(char *dest, char *src, int n)
 {
 
         int i;
-        int len;
 
         i = 0;
-        len = strlen(src);
 
         if (src == NULL || dest == NULL || n == 0)
         {
