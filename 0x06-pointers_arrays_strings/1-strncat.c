@@ -10,7 +10,24 @@
  * @dest: 2nd input pointer.
  * Return: pointer to new string.
  */
+int main(void)
+{
+    char s1[98] = "Hello ";
+    char s2[] = "World!\n";
+    char *ptr;
 
+    printf("%s\n", s1);
+    printf("%s", s2);
+    ptr = _strncat(s1, s2, 1);
+    printf("%s\n", s1);
+    printf("%s", s2);
+    printf("%s\n", ptr);
+    ptr = _strncat(s1, s2, 1024);
+    printf("%s", s1);
+    printf("%s", s2);
+    printf("%s", ptr);
+    return (0);
+}
 char *_strncat(char *dest, char *src, int n)
 {
         int i;
@@ -20,21 +37,13 @@ char *_strncat(char *dest, char *src, int n)
 
         len_dest = strlen(dest);
         len_src = strlen(src);
-        length = len_dest + len_src + 1;
-
-        char *ptr = calloc(length, sizeof(char));
-
-        for (i = 0; i < len_dest; i++)
-        {
-                ptr[i] = dest[i];
-        }
 
         if (n > 0)
         {
-                for (i = 0; i < n; i++)
+                for (i = 0; src[i] && i < n; i++)
                 {
-                        ptr[len_dest + i] = src[i];
+                        dest[len_dest + i] = src[i];
                 }
         }
-        return ptr;
+        return (dest);
 }
