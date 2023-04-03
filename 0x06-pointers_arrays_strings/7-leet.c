@@ -14,8 +14,11 @@ char *leet(char *str)
 {
         int i;
         int j;
-        char *leet_key_letters = "aeotl";
-        char *leet_key_nums = "43071";
+        char *leet_key_letters;
+        char *leet_key_nums;
+
+        leet_key_letters = "aeotl";
+        leet_key_nums = "43071";
 
         for (i = 0; str[i] != '\0'; i++)
         {
