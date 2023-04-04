@@ -10,12 +10,11 @@
  *         consist only of bytes from accept.
  */
 
-
 unsigned int _strspn(char *s, char *accept)
 {
 	if (s == NULL || accept == NULL)
 	{
-		return (NULL);
+		return 0;
 	}
 
 	int i;
@@ -24,7 +23,7 @@ unsigned int _strspn(char *s, char *accept)
 	int matched;
 
 	bytes = 0;
-	matched = 0;
+	matched = 1;
 
 	for (i = 0; s[i] != '\0' && matched; i++)
 	{
