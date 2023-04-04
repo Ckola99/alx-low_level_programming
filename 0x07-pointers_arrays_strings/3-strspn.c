@@ -10,21 +10,42 @@
  *         consist only of bytes from accept.
  */
 
+int main(void)
+{
+    char *s = "hello, world";
+    char *f = "oleh";
+    unsigned int n;
+
+    n = _strspn(s, f);
+    printf("%u\n", n);
+    return (0);
+}
+
 unsigned int _strspn(char *s, char *accept)
 {
+	if (s == NULL || accept == NULL)
+	{
+		return 0;
+	}
+
 	int i;
 	int j;
-	int bytes;
+	unsigned int bytes;
+	int matched = 1;
 
 	bytes = 0;
 
-	for (i = 0; s[i] != ' '; i++)
+	for (i = 0; s[i] != '\0' && matched; i++)
 	{
+		matched = 0;
+
 		for (j = 0; accept[j] != '\0'; j++)
 		{
 			if (s[i] == accept[j])
 			{
 				bytes++;
+				matched = 1;
+				break;
 			}
 		}
 	}
