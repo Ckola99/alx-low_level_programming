@@ -25,9 +25,6 @@ int main(void)
 
 char *_strstr(char *haystack, char *needle)
 {
-	int i;
-	int j;
-	int match;
 
 	while (*haystack != '\0')
 	{
