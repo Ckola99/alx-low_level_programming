@@ -18,18 +18,15 @@ char *_strpbrk(char *s, char *accept)
 		return (NULL);
 	}
 
-	char *tmp;
-
 	while (*s != '\0')
 	{
-		tmp = accept;
-		while (*tmp != '\0')
+		while (*accept != '\0')
 		{
-			if (*s == *tmp)
+			if (*s == *accept)
 			{
 				return (s);
 			}
-			tmp++;
+			accept++;
 		}
 		s++;
 	}
