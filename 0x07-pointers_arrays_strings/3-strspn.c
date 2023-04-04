@@ -31,9 +31,10 @@ unsigned int _strspn(char *s, char *accept)
 	int i;
 	int j;
 	unsigned int bytes;
-	int matched = 1;
+	int matched;
 
 	bytes = 0;
+	matched = 0;
 
 	for (i = 0; s[i] != '\0' && matched; i++)
 	{
