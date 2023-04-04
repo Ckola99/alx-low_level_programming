@@ -12,8 +12,6 @@
 
 char *_strpbrk(char *s, char *accept)
 {
-	int i;
-	int j;
 
 	if (s == NULL || accept == NULL)
 	{
