@@ -37,7 +37,7 @@ int is_prime_helper(int n, int div)
 		return (0);
 	}
 
-	if (div > sqrt(n))
+	if (div > _sqrt_recursion(n))
 	{
 		return (1);
 	}
