@@ -13,7 +13,6 @@
 
 int is_prime_number(int n)
 {
-	int div = 2;
 
 	if (n <= 1)
 	{
