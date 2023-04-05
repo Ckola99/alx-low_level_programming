@@ -12,18 +12,17 @@ int _sqrt_recursion(int n)
 {
 	if (n == 0 || n == 1)
 	{
-		return n;
+		return (n);
 	}
 	else if (n < 0)
 	{
-		return -1;
+		return (-1);
 	}
 	else
 	{
 		return find_sqrt(n, 1);
 	}
 }
-
 
 /**
  * find_sqrt - Finds the natural square root of an inputted number.
@@ -36,16 +35,16 @@ int _sqrt_recursion(int n)
 
 int find_sqrt(int num, int root)
 {
-    if ((root * root) == num)
-    {
-        return root;
-    }
-    else if (root >= num / 2)
-    {
-        return -1;
-    }
-    else
-    {
-        return find_sqrt(num, root + 1);
-    }
+	if ((root * root) == num)
+	{
+		return (root);
+	}
+	else if (root >= num / 2)
+	{
+		return (-1);
+	}
+	else
+	{
+		return (find_sqrt(num, root + 1));
+	}
 }
