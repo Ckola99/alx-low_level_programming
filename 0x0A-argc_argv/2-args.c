@@ -16,6 +16,12 @@ int main(int __attribute__((__unused__)) argc, char *argv[])
 	return (0);
 }
 
+/**
+ * print_arg - is a function that adds the command line arguments.
+ * @argv: is the argument.
+ * Return: sum.
+*/
+
 int print_arg(char *argv[])
 {
 	if (argv == NULL)
