@@ -38,7 +38,7 @@ int main(int argc, char *argv[])
 				if (!isdigit(arg[j]))
 				{
 					printf("Error\n");
-					return 1;
+					return (1);
 				}
 				j++;
 			}
@@ -49,5 +49,5 @@ int main(int argc, char *argv[])
 		printf("%d\n", total);
 	}
 
-	return 0;
+	return (0);
 }
