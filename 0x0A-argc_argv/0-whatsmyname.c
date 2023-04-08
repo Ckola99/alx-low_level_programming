@@ -2,22 +2,17 @@
 #include <stdlib.h>
 #include <string.h>
 
+/**
+ * main - Prints the program name, followed by a new line.
+ * @argc: The number of arguments supplied to the program.
+ * @argv: An array of pointers to the arguments.
+ *
+ * Return: Always o.
+ */
+
 int main(int __attribute__((__unused__)) argc, char *argv[])
 {
-	char *program_name;
-	char *base_name;
+	printf("%s\n", argv[0]);
 
-	program_name = argv[0];
-	base_name = strrchr(program_name, '/');
-
-	if (base_name == NULL)
-	{
-		base_name = program_name;
-	}
-	else
-	{
-		base_name++;
-	}
-	printf("%s\n", base_name);
-	return 0;
+	return (0);
 }
