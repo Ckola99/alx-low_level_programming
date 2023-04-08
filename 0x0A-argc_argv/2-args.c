@@ -10,16 +10,17 @@
 
 int print_arg(char *argv[]);
 
-int main(int __attribute__((__unused__)) argc, char *argv[])
+int main(int argc, char *argv[])
 {
 	print_arg(argv);
 	return (0);
 }
 
 /**
- * print_arg - is a function that adds the command line arguments.
- * @argv: is the argument.
- * Return: sum.
+ * print_arg() function takes an array
+   of pointers to strings (char *argv[]) as its parameter.
+ * @argv: is an argument.
+ *  Returns: (0)
 */
 
 int print_arg(char *argv[])
