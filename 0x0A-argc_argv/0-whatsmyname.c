@@ -4,9 +4,12 @@
 
 int main(int __attribute__((__unused__)) argc, char *argv[])
 {
-	char *program_name = argv[0];
-	char *base_name = strrchr(program_name, '/');
-	
+	char *program_name;
+	char *base_name;
+
+	program_name = argv[0];
+	base_name = strrchr(program_name, '/');
+
 	if (base_name == NULL)
 	{
 		base_name = program_name;
