@@ -14,22 +14,20 @@
 
 char *create_array(unsigned int size, char c)
 {
-	
+	char *arr;
+	int i;
+
+	arr = (char*)malloc(size * sizeof(char));
+
 	if (size == 0)
 	{
 		return NULL;
 	}
 
-	char *arr;
-
-	arr = (char*)malloc(size * sizeof(char));
-
 	if (arr == NULL)
 	{
 		return NULL;
 	}
-
-	int i;
 
 	for (i = 0; i < size; i++)
 	{
