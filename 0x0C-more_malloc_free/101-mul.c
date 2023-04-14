@@ -80,11 +80,12 @@ void multiply(char *num1, char *num2)
 {
 	int len1;
 	int len2;
+	int *result;
 
 	len1 = strlen(num1);
 	len2 = strlen(num2);
 
-	int *result = calloc(len1 + len2, sizeof(int));
+	result = calloc(len1 + len2, sizeof(int));
 
 	for (int i = len1 - 1; i >= 0; i--)
 	{
@@ -107,7 +108,7 @@ void multiply(char *num1, char *num2)
 			result[pos2] = sum % 10;
 		}
 	}
-	
+
 	int i = 0;
 	while (i < len1 + len2 && result[i] == 0)
 	{
