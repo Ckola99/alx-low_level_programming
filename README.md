@@ -20,6 +20,10 @@
 
 0x09. C - Static libraries.
 
-0x0A. C - argc, argv.
+0x0A. C - Argc, argv.
 
-0x0B. C - malloc, free.
+0x0B. C - Malloc, free.
+
+0x0C. C - More malloc and more free.
+
+0x0D. C - Preprocessor
