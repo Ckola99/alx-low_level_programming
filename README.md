@@ -26,4 +26,6 @@
 
 0x0C. C - More malloc and more free.
 
-0x0D. C - Preprocessor
+0x0D. C - Preprocessor.
+
+0x0E. C - Structures, typedef.
