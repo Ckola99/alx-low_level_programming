@@ -3,7 +3,7 @@
 
 int _strlen(char *str);
 char *_strcopy(char *dest, char *src);
-dog_t *go(char *name, float age, char *owner);
+dog_t *new_dog(char *name, float age, char *owner);
 
 /**
  * _strlen - Finds the length of a string.
@@ -42,42 +42,42 @@ char *_strcopy(char *dest, char *src)
 }
 
 /**
- * go - Creates a new dog.
+ * new_dog - Creates a new dog.
  * @name: The name of the dog.
  * @age: The age of the dog.
  * @owner: The owner of the dog.
  *
  * Return: The new struct dog.
  */
-dog_t *go(char *name, float age, char *owner)
+dog_t *new_dog(char *name, float age, char *owner)
 {
-	dog_t *new_doggo;
+	dog_t *doggo;
 
 	if (name == NULL || age < 0 || owner == NULL)
 		return (NULL);
 
-	new_doggo = malloc(sizeof(dog_t));
-	if (new_doggo == NULL)
+	doggo = malloc(sizeof(dog_t));
+	if (doggo == NULL)
 		return (NULL);
 
-	new_doggo->name = malloc(sizeof(char) * (_strlen(name) + 1));
-	if (new_doggo->name == NULL)
+	doggo->name = malloc(sizeof(char) * (_strlen(name) + 1));
+	if (doggo->name == NULL)
 	{
-		free(new_doggo);
+		free(doggo);
 		return (NULL);
 	}
 
-	new_doggo->owner = malloc(sizeof(char) * (_strlen(owner) + 1));
-	if (new_doggo->owner == NULL)
+	doggo->owner = malloc(sizeof(char) * (_strlen(owner) + 1));
+	if (doggo->owner == NULL)
 	{
-		free(new_doggo->name);
-		free(new_doggo);
+		free(doggo->name);
+		free(doggo);
 		return (NULL);
 	}
 
-	new_doggo->name = _strcopy(new_doggo->name, name);
-	new_doggo->age = age;
-	new_doggo->owner = _strcopy(new_doggo->owner, owner);
+	doggo->name = _strcopy(doggo->name, name);
+	doggo->age = age;
+	doggo->owner = _strcopy(doggo->owner, owner);
 
-	return (new_doggo);
+	return (doggo);
 }
