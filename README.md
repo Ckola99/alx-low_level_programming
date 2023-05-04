@@ -31,3 +31,7 @@
 0x0E. C - Structures, typedef.
 
 0x0F. C - Function pointers.
+
+0x11. C - Printf.
+
+0x12. C - Singly Linked lists.
