@@ -8,18 +8,21 @@
  * Return: If the list is empty - 0.
  *         Otherwise - the sum of all the data.
  */
+
 int sum_listint(listint_t *head)
 {
 	int sum;
 
 	sum = 0;
 
-	while (head)
+	if (head == NULL)
+		return (0);
+
+	while (head != NULL)
 	{
-		sum = head->n;
-		sum += sum;
+		sum += head->n;
 		head = head->next;
 	}
 
-	return (head);
+	return (sum);
 }
