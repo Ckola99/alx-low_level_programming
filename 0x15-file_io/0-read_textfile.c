@@ -1,38 +1,39 @@
 #include "readfile.h"
+#include <stdlib.h>
 
+/**
+ * read_textfile - Reads a text file and prints it to POSIX stdout.
+ * @filename: A pointer to the name of the file.
+ * @letters: The number of letters the
+ *           function should read and print.
+ *
+ * Return: If the function fails or filename is NULL - 0.
+ *         O/w - the actual number of bytes the function can read and print.
+ */
 ssize_t read_textfile(const char *filename, size_t letters)
 {
-	if (!filename)
-		return 0;
+	ssize_t o, r, w;
+	char *buffer;
 
-	FILE *fp = fopen(filename, "r");
-	if (!fp)
-		return 0;
+	if (filename == NULL)
+		return (0);
 
-	char *buf = malloc(letters + 1);
-	if (!buf)
+	buffer = malloc(sizeof(char) * letters);
+	if (buffer == NULL)
+		return (0);
+
+	o = open(filename, O_RDONLY);
+	r = read(o, buffer, letters);
+	w = write(STDOUT_FILENO, buffer, r);
+
+	if (o == -1 || r == -1 || w == -1 || w != r)
 	{
-		fclose(fp);
-		return 0;
+		free(buffer);
+		return (0);
 	}
 
-	size_t nread = fread(buf, 1, letters, fp);
-	buf[nread] = '\0';
+	free(buffer);
+	close(o);
 
-	ssize_t nwritten = write(STDOUT_FILENO, buf, nread);
-	if (nwritten < 0 || (size_t)nwritten != nread)
-	{
-		fclose(fp);
-		free(buf);
-		return 0;
-	}
-
-	fclose(fp);
-	free(buf);
-	return nread;
-}
-
-static size_t min(size_t a, size_t b)
-{
-	return a < b ? a : b;
+	return (w);
 }
